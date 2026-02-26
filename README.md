@@ -4,7 +4,7 @@ To clone this repo do...
 ```bash
 git clone --recursive https://github.com/swaldy/smart_pixels_BDT.git
 ```
-I run all code on lxplus. Before running any scripts, in a clean shell do...
+I run all code on lxplus9. Before running any scripts, in a clean shell do...
 
 ```bash
 source /cvmfs/sft.cern.ch/lcg/views/LCG_106a/x86_64-el9-gcc11-opt/setup.sh
@@ -14,7 +14,7 @@ pip install --upgrade pip
 pip install hls4ml conifer
 ```
 After you do this the first time, all other times you log on, execute these steps...
-```
+```bash
 source /cvmfs/sft.cern.ch/lcg/views/LCG_106a/x86_64-el9-gcc11-opt/setup.sh
 source venvs/hls4ml_conifer/bin/activate
 ```
