@@ -1,4 +1,4 @@
-This repo was heavily inspired by both https://github.com/smart-pix/filter and https://github.com/fatimargz/Locked-in-Leptons/tree/main
+This repo was heavily inspired by https://github.com/smart-pix/filter and https://github.com/fatimargz/Locked-in-Leptons/tree/main and https://hub.gesis.mybinder.org/user/fastmachinelear-hls4ml-tutorial-w3idccg7/lab
 
 To clone this repo do...
 ```bash
