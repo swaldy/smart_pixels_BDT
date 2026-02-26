@@ -18,5 +18,7 @@ source venvs/hls4ml_conifer_clean/bin/activate
 ```
 # Files
 preprocess.py -- takes label and recon2D .parquet files and gets them ready for training. Saves files in CERNBox with path hardcoded
+
 BDT -- contains scripts related to training BDT
+
 NN -- contains scripts related to training NN
