@@ -18,3 +18,8 @@ cfg['XilinxPart'] = 'xcu250-figd2104-2L-e' #the part number for an FPGA. Taken f
 print('Modified Configuration\n' + '-' * 50)
 plotting.print_dict(cfg)
 print('-' * 50)
+
+# convert the model to the conifer representation
+conifer_model = conifer.converters.convert_from_sklearn(clf, cfg)
+# write the project (writing HLS project to disk)
+conifer_model.write()
