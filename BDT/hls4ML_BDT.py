@@ -8,6 +8,7 @@ import conifer
 import conifer.converters as C
 #print([name for name in dir(C) if "convert" in name])
 import plotting
+import matplotlib.pyplot as plt
 from matplotlib.legend import Legend
 from matplotlib.lines import Line2D
 
