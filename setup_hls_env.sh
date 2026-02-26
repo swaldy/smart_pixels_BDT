@@ -1,4 +1,4 @@
-cat > ~/setup_hls_env.sh <<'EOF'
+cat > setup_hls_env.sh <<'EOF'
 #!/usr/bin/env bash
 # Load LCG view + activate venv for hls4ml/conifer on lxplus
 
@@ -9,7 +9,7 @@ set -e
 LCG_SETUP="/cvmfs/sft.cern.ch/lcg/views/LCG_106a/x86_64-el9-gcc11-opt/setup.sh"
 
 # ---- Your venv ----
-VENV_DIR="$HOME/venvs/hls4ml_conifer"
+VENV_DIR="venvs/hls4ml_conifer"
 
 # Load LCG
 if [ -f "$LCG_SETUP" ]; then
