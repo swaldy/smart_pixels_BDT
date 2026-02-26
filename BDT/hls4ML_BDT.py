@@ -5,6 +5,8 @@ from sklearn.metrics import accuracy_score, roc_auc_score, roc_curve, classifica
 import pandas as pd
 import numpy as np
 import conifer
+import conifer.converters as C
+print([name for name in dir(C) if "convert" in name])
 import plotting
 
 models_dir = '/eos/user/s/swaldych/smart_pix/labels/models'
