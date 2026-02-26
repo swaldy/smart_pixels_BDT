@@ -1,5 +1,5 @@
-import plotting
 import conifer
+from conifer import plotting
 
 
 #Covert model to FPGA firmware with `conifer`
