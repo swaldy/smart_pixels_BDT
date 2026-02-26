@@ -12,6 +12,7 @@ python3 -m venv --system-site-packages venvs/hls4ml_conifer
 source venvs/hls4ml_conifer/bin/activate
 pip install --upgrade pip
 pip install hls4ml conifer
+pip install xgboost==1.7.6
 ```
 After you do this the first time, all other times you log on, execute these steps...
 ```bash
