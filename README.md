@@ -31,4 +31,4 @@ make sure you are in environment (hls4ml_conifer_clean). Then run this:
 ```bash
 python3 preprocess.py
 ```
-Please note that the file numbers to scan over are hardcoded as well as all paths.
+It will take about 8 minutes. Don't be alarmed. Please note that the file numbers to scan over are hardcoded as well as all paths.
