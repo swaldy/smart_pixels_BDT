@@ -4,6 +4,15 @@ To clone this repo do...
 ```bash
 git clone --recursive https://github.com/swaldy/smart_pixels_BDT.git
 ```
+## Files
+preprocess.py -- takes label and recon2D .parquet files and gets them ready for training. Saves files in CERNBox with path hardcoded
+
+BDT -- contains scripts related to training BDT
+
+NN -- contains scripts related to training NN
+
+## Step 0: set up python venv
+
 I run all code on lxplus9. Before running any scripts, in a clean shell do...
 
 ```bash
@@ -16,12 +25,6 @@ After you do this the first time, all other times you log on, execute these step
 ```bash
 source venvs/hls4ml_conifer_clean/bin/activate
 ```
-# Files
-preprocess.py -- takes label and recon2D .parquet files and gets them ready for training. Saves files in CERNBox with path hardcoded
-
-BDT -- contains scripts related to training BDT
-
-NN -- contains scripts related to training NN
 
 # Step 1: run preprocess.py
 make sure you are in environment (hls4ml_conifer_clean). Then run this:
