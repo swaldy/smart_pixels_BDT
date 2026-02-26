@@ -12,6 +12,10 @@ sensor_geom = '50x12P5x150_0fb'
 dataset_savedir = '/eos/user/s/swaldych/smart_pix/labels/preprocess/'
 dirtrain = '/eos/user/s/swaldych/smart_pix/labels/'
 
+dftrain = pd.read_parquet(dirtrain+'labels_d16401.parquet')
+print(dftrain.head())
+print(dftrain.tail())
+
 # -------------------------
 # Manually define parquet range
 # -------------------------
