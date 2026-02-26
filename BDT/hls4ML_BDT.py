@@ -8,6 +8,9 @@ import conifer
 import conifer.converters as C
 #print([name for name in dir(C) if "convert" in name])
 import plotting
+from matplotlib.legend import Legend
+from matplotlib.lines import Line2D
+
 
 models_dir = '/eos/user/s/swaldych/smart_pix/labels/models'
 results_dir = '/eos/user/s/swaldych/smart_pix/labels/results'
@@ -71,3 +74,32 @@ print('-' * 50)
 conifer_model = conifer.converters.convert_from_xgboost(model, cfg)
 # write the project (writing HLS project to disk)
 conifer_model.write()
+model.save_model(f"{models_dir}/xgboost_model_conifer_{tag}.json")
+
+conifer_model.compile()
+y_hls = conifer_model.decision_function(X_test)
+
+y_hls_proba = softmax(y_hls)  # compute class probabilities from the raw predictions
+
+print(f'Accuracy baseline:  {accuracy_score(np.argmax(y_test_one_hot, axis=1), np.argmax(y_ref, axis=1)):.5f}')
+print(f'Accuracy xgboost:   {accuracy_score(np.argmax(y_test_one_hot, axis=1), np.argmax(y_xgb, axis=1)):.5f}')
+print(f'Accuracy conifer:   {accuracy_score(np.argmax(y_test_one_hot, axis=1), np.argmax(y_hls_proba, axis=1)):.5f}')
+
+
+fig, ax = plt.subplots(figsize=(9, 9))
+_ = plotting.makeRoc(y_test_one_hot, y_ref, classes, linestyle='--')
+plt.gca().set_prop_cycle(None)  # reset the colors
+_ = plotting.makeRoc(y_test_one_hot, y_xgb, classes, linestyle=':')
+plt.gca().set_prop_cycle(None)  # reset the colors
+_ = plotting.makeRoc(y_test_one_hot, y_hls_proba, classes, linestyle='-')
+
+# add a legend
+
+lines = [
+    Line2D([0], [0], ls='--'),
+    Line2D([0], [0], ls=':'),
+    Line2D([0], [0], ls='-'),
+]
+
+leg = Legend(ax, lines, labels=['part1 Keras', 'xgboost', 'conifer'], loc='lower right', frameon=False)
+ax.add_artist(leg)
