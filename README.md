@@ -7,13 +7,13 @@ git clone --recursive https://github.com/swaldy/smart_pixels_BDT.git
 I run all code on lxplus9. Before running any scripts, in a clean shell do...
 
 ```bash
-python3 -m venv --system-site-packages venvs/hls4ml_conifer
-source venvs/hls4ml_conifer/bin/activate
-pip install conifer xgboost==1.7.6 scikit-learn numpy scipy matplotlib pandas hls4ml json math glob
+python3 -m venv --system-site-packages venvs/hls4ml_conifer_clean
+source venvs/hls4ml_conifer_clean/bin/activate
+pip install conifer xgboost==1.7.6 scikit-learn numpy scipy matplotlib pandas hls4ml
 ```
 After you do this the first time, all other times you log on, execute these steps...
 ```bash
-source venvs/hls4ml_conifer/bin/activate
+source venvs/hls4ml_conifer_clean/bin/activate
 ```
 # Files
 preprocess.py -- takes label and recon2D .parquet files and gets them ready for training. Saves files in CERNBox with path hardcoded
