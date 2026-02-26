@@ -5,10 +5,8 @@ from sklearn.metrics import accuracy_score, roc_auc_score, roc_curve, classifica
 import pandas as pd
 import numpy as np
 import matplotlib.pyplot as plt
-import plotting
 import json
 from tensorflow.keras.models import load_model
-import conifer
 
 models_dir = '/eos/user/s/swaldych/smart_pix/labels/models'
 results_dir = '/eos/user/s/swaldych/smart_pix/labels/results'
@@ -137,20 +135,3 @@ plt.grid()
 plt.savefig("/eos/user/s/swaldych/smart_pix/labels/models/BDT_roc_curve.png", dpi=300, bbox_inches="tight")  #  Save as PNG
 plt.close()  #  Close the figure to avoid display
 
-#------------------------------------------------
-#Covert model to FPGA firmware with `conifer`
-cfg = conifer.backends.xilinxhls.auto_config()
-
-# print the config
-print('Default Configuration\n' + '-' * 50)
-plotting.print_dict(cfg)
-print('-' * 50)
-
-# modify the config
-cfg['OutputDir'] = '/eos/user/s/swaldych/smart_pix/labels/generated_firmware_files' #where to put all generated firmware files
-cfg['XilinxPart'] = 'xcu250-figd2104-2L-e' #the part number for an FPGA. Taken from example (Alveo U50)
-
-# print the config again
-print('Modified Configuration\n' + '-' * 50)
-plotting.print_dict(cfg)
-print('-' * 50)
