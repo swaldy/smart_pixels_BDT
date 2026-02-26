@@ -16,7 +16,7 @@ dirtrain = '/eos/user/s/swaldych/smart_pix/labels/'
 # Manually define parquet range
 # -------------------------
 start_id = 16401
-end_id   = 16420   # <-- set this to your last dataset
+end_id   = 16441   # <-- set this to your last dataset
 
 trainlabels = []
 trainrecons = []
