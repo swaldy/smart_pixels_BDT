@@ -13,7 +13,8 @@ source venvs/hls4ml_conifer/bin/activate
 pip install --upgrade pip
 pip install hls4ml conifer
 ```
-After you do this the first time, all other times you log on, execute the bash script...
+After you do this the first time, all other times you log on, execute these steps...
 ```
-source setup_hls_env.sh
+source /cvmfs/sft.cern.ch/lcg/views/LCG_106a/x86_64-el9-gcc11-opt/setup.sh
+source venvs/hls4ml_conifer/bin/activate
 ```
