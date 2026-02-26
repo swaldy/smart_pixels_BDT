@@ -19,6 +19,7 @@ I run all code on lxplus9. Before running any scripts, in a clean shell do...
 python3 -m venv --system-site-packages venvs/hls4ml_conifer_clean
 source venvs/hls4ml_conifer_clean/bin/activate
 pip install conifer xgboost==1.7.6 scikit-learn numpy scipy matplotlib pandas hls4ml
+pip install pyarrow
 ```
 After you do this the first time, all other times you log on, execute these steps...
 ```bash
