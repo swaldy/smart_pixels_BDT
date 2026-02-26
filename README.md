@@ -31,3 +31,10 @@ make sure you are in environment (hls4ml_conifer_clean). Then run this:
 python3 preprocess.py
 ```
 It will take about 8 minutes. Don't be alarmed. Please note that the file numbers to scan over are hardcoded as well as all paths.
+
+## Step 2: run training
+go to either NN or BDT to do training. 
+
+```bash
+cd BDT
+```
