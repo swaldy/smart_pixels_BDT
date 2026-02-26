@@ -26,8 +26,9 @@ After you do this the first time, all other times you log on, execute these step
 source venvs/hls4ml_conifer_clean/bin/activate
 ```
 
-# Step 1: run preprocess.py
+## Step 1: run preprocess.py
 make sure you are in environment (hls4ml_conifer_clean). Then run this:
 ```bash
 python3 preprocess.py
 ```
+Please note that the file numbers to scan over are hardcoded as well as all paths.
