@@ -22,3 +22,9 @@ preprocess.py -- takes label and recon2D .parquet files and gets them ready for 
 BDT -- contains scripts related to training BDT
 
 NN -- contains scripts related to training NN
+
+# Step 1: run preprocess.py
+make sure you are in environment (hls4ml_conifer_clean). Then run this:
+```bash
+python3 preprocess.py
+```
