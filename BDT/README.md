@@ -10,4 +10,7 @@ To start, lets train a BDT and do validation. This can be simply done via...
 ```bash
 python3 train_BDT.py
 ```
-Once everything looks good, lets convert this model to FPGA/ASIC firmware with conifer
+Once everything looks good, lets convert this model to FPGA/ASIC firmware with conifer...
+```bash
+python3 hls4ML_BDT.py
+```
