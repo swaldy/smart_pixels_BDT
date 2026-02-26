@@ -18,7 +18,7 @@ After you do this the first time, all other times you log on, execute these step
 source /cvmfs/sft.cern.ch/lcg/views/LCG_106a/x86_64-el9-gcc11-opt/setup.sh
 source venvs/hls4ml_conifer/bin/activate
 ```
-#Files
+# Files
 preprocess.py -- takes label and recon2D .parquet files and gets them ready for training. Saves files in CERNBox with path hardcoded
 BDT -- contains scripts related to training BDT
 NN -- contains scripts related to training NN
