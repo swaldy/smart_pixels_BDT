@@ -6,7 +6,7 @@ import pandas as pd
 import numpy as np
 import conifer
 import conifer.converters as C
-print([name for name in dir(C) if "convert" in name])
+#print([name for name in dir(C) if "convert" in name])
 import plotting
 
 models_dir = '/eos/user/s/swaldych/smart_pix/labels/models'
@@ -68,6 +68,6 @@ plotting.print_dict(cfg)
 print('-' * 50)
 
 # convert the model to the conifer representation
-conifer_model = conifer.converters.convert_from_sklearn(model, cfg)
+conifer_model = conifer.converters.convert_from_xgboost(model, cfg)
 # write the project (writing HLS project to disk)
 conifer_model.write()
