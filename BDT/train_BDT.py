@@ -135,3 +135,31 @@ plt.grid()
 plt.savefig("/eos/user/s/swaldych/smart_pix/labels/models/BDT_roc_curve.png", dpi=300, bbox_inches="tight")  #  Save as PNG
 plt.close()  #  Close the figure to avoid display
 
+# --- LOSS ---
+loss_values = history_dict['loss']
+val_loss_values = history_dict['val_loss']
+epochs = range(1, len(loss_values) + 1)
+
+plt.plot(epochs, loss_values, 'bo', label='Training loss')
+plt.plot(epochs, val_loss_values, 'orange', label='Validation loss')
+plt.title('Training and validation loss')
+plt.xlabel('Epochs')
+plt.ylabel('Loss')
+plt.legend()
+plt.savefig(f"{results_dir}/loss_{tag}_BDT.png")
+plt.close()
+
+# --- ACCURACY ---
+acc = history_dict['sparse_categorical_accuracy']
+val_acc = history_dict['val_sparse_categorical_accuracy']
+epochs = range(1, len(acc) + 1)
+
+plt.plot(epochs, acc, 'bo', label='Training accuracy')
+plt.plot(epochs, val_acc, 'orange', label='Validation accuracy')
+plt.title('Training and validation accuracy')
+plt.xlabel('Epochs')
+plt.ylabel('Accuracy')
+plt.legend()
+plt.savefig(f"{results_dir}/accuracy_{tag}_BDT.png")
+plt.close()
+
