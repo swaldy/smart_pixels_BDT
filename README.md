@@ -21,7 +21,9 @@ This is a public link for dataset 2s (50x12.5x100 um3 sensor geometry): https://
 
 run loop.sh **AFTER** you edit the paths for your CERN eos to copy the needed labels and recon2D files... 
 
-
+```
+bash loop.sh
+```
 # ------LPC CAF (FNAL) SETUP EXAMPLES (recommended)-----------
 The steps below describe how to run scripts when working on LPC CAF resources. Guide on how to set up LPC with eos is found here: https://www.uscms.org/uscms_at_work/physics/computing/getstarted/uaf.shtml
 
