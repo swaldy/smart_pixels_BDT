@@ -20,7 +20,7 @@ mkdir -p ~/nobackup/myenvs
 cd ~/nobackup/myenvs
 python3 -m venv lpc-ml
 source lpc-ml/bin/activate
-pip install conifer xgboost==1.7.6 scikit-learn numpy scipy matplotlib pandas hls4ml
+pip install conifer xgboost==1.7.6 scikit-learn numpy scipy matplotlib pandas hls4ml #this took about 8 minutes for me
 ```
 # ------LXPLUS SETUP EXAMPLES (Not recommended)-----------
 
