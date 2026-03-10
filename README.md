@@ -11,6 +11,8 @@ BDT -- contains scripts related to training BDT
 
 NN -- contains scripts related to training NN
 
+# ------LXPLUS SETUP EXAMPLES-----------
+
 ## Step 0: set up python venv
 
 I run all code on lxplus9. Before running any scripts, in a clean shell do...
