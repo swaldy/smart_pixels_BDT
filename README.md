@@ -13,7 +13,12 @@ BDT -- contains scripts related to training BDT
 NN -- contains scripts related to training NN
 
 ## How to get needed data to make code in this repo work:
-When I first started working on this project I was working on lxplus, so I will just list the steps I personally took...
+When I first started working on this project I was working on lxplus, so I will just list the steps I personally took. Since I was given data in CERNBox, the output also goes to CERNBox...
+
+This is a public link for dataset 2s (50x12.5x100 um3 sensor geometry): https://cernbox.cern.ch/s/HaQVugVTlzbKEXH
+
+run loop.sh to copy the needed labels and recon2D files... 
+
 
 # ------LPC CAF (FNAL) SETUP EXAMPLES (recommended)-----------
 The steps below describe how to run scripts when working on LPC CAF resources. Guide on how to set up LPC with eos is found here: https://www.uscms.org/uscms_at_work/physics/computing/getstarted/uaf.shtml
