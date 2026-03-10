@@ -15,6 +15,15 @@ NN -- contains scripts related to training NN
 The steps below describe how to run scripts when working on LPC CAF resources. Guide on how to set up LPC with eos is found here: https://www.uscms.org/uscms_at_work/physics/computing/getstarted/uaf.shtml
 
 ## Step 0: set up
+If needed, move any files from CERN eos to FNAL eos (must have up to date grid cert! ikf you need to renew go here: https://ca.cern.ch/ca/user/Request.aspx?template=ee2user)
+...
+```
+scp /path/on/your/laptop/YourCert.p12 user@cmslpc-el9.fnal.gov:~/.globus/usercred.p12
+ssh user@cmslpc-el9.fnal.gov
+chmod 600 ~/.globus/usercred.p12
+voms-proxy-init -voms cms
+```
+Now lets set up a place to get work done: 
 ```
 mkdir -p ~/nobackup/myenvs
 cd ~/nobackup/myenvs
