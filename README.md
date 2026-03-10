@@ -4,13 +4,14 @@ To clone this repo do...
 ```bash
 git clone --recursive https://github.com/swaldy/smart_pixels_BDT.git
 ```
+**note**: If working on LPC CAF (recommended for further steps with HLS4ML), please clone on ```nobackup```, NOT your home. This way you have enough disk space!
 ## Files
 preprocess.py -- takes label and recon2D .parquet files and gets them ready for training. Saves files in CERNBox with path hardcoded
 
 BDT -- contains scripts related to training BDT
 
 NN -- contains scripts related to training NN
-# ------LPC CAF (FNAL) SETUP EXAMPLES-----------
+# ------LPC CAF (FNAL) SETUP EXAMPLES (recommended)-----------
 The steps below describe how to run scripts when working on LPC CAF resources. Guide on how to set up LPC with eos is found here: https://www.uscms.org/uscms_at_work/physics/computing/getstarted/uaf.shtml
 
 ## Step 0: set up
@@ -18,7 +19,7 @@ Every time you open a new terminal enter:
 ```
 source /cvmfs/cms.cern.ch/cmsset_default.sh
 ```
-# ------LXPLUS SETUP EXAMPLES-----------
+# ------LXPLUS SETUP EXAMPLES (Not recommended)-----------
 
 The steps below describe how to run scripts when working in lxplus9
 
