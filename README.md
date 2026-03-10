@@ -15,9 +15,12 @@ NN -- contains scripts related to training NN
 The steps below describe how to run scripts when working on LPC CAF resources. Guide on how to set up LPC with eos is found here: https://www.uscms.org/uscms_at_work/physics/computing/getstarted/uaf.shtml
 
 ## Step 0: set up
-Every time you open a new terminal enter:
 ```
-source /cvmfs/cms.cern.ch/cmsset_default.sh
+mkdir -p ~/nobackup/myenvs
+cd ~/nobackup/myenvs
+python3 -m venv lpc-ml
+source lpc-ml/bin/activate
+pip install conifer xgboost==1.7.6 scikit-learn numpy scipy matplotlib pandas hls4ml
 ```
 # ------LXPLUS SETUP EXAMPLES (Not recommended)-----------
 
