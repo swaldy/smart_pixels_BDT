@@ -13,6 +13,8 @@ NN -- contains scripts related to training NN
 
 # ------LXPLUS SETUP EXAMPLES-----------
 
+The steps below describe how to run scripts when working in lxplus9
+
 ## Step 0: set up python venv
 
 I run all code on lxplus9. Before running any scripts, in a clean shell do...
