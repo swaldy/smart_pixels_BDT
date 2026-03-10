@@ -13,7 +13,11 @@ NN -- contains scripts related to training NN
 # ------LPC CAF (FNAL) SETUP EXAMPLES-----------
 The steps below describe how to run scripts when working on LPC CAF resources. Guide on how to set up LPC with eos is found here: https://www.uscms.org/uscms_at_work/physics/computing/getstarted/uaf.shtml
 
-
+## Step 0: set up
+Every time you open a new terminal enter:
+```
+source /cvmfs/cms.cern.ch/cmsset_default.sh
+```
 # ------LXPLUS SETUP EXAMPLES-----------
 
 The steps below describe how to run scripts when working in lxplus9
