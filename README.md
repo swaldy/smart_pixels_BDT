@@ -22,6 +22,11 @@ scp /path/on/your/laptop/YourCert.p12 user@cmslpc-el9.fnal.gov:~/.globus/usercre
 ssh user@cmslpc-el9.fnal.gov
 chmod 600 ~/.globus/usercred.p12
 voms-proxy-init -voms cms
+
+#replace path with yours...
+xrdcp -r \
+root://eosuser.cern.ch//eos/user/s/swaldych/smart_pix \
+root://cmseos.fnal.gov//store/user/swaldych/
 ```
 Now lets set up a place to get work done: 
 ```
