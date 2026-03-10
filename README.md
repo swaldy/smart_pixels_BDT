@@ -8,6 +8,8 @@ git clone --recursive https://github.com/swaldy/smart_pixels_BDT.git
 ## Files in repo:
 preprocess.py -- takes label and recon2D .parquet files and gets them ready for training. Saves files in CERNBox with path hardcoded
 
+loop.sh -- a small shell script to download with a for loop over file numbers d16401 to d16441
+
 BDT -- contains scripts related to training BDT
 
 NN -- contains scripts related to training NN
