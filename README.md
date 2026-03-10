@@ -23,7 +23,7 @@ ssh user@cmslpc-el9.fnal.gov
 chmod 600 ~/.globus/usercred.p12
 voms-proxy-init -voms cms
 
-#replace path with yours...
+#replace path with yours...(this step takes a few minutes if you have a lot like I did)
 xrdcp -r \
 root://eosuser.cern.ch//eos/user/s/swaldych/smart_pix \
 root://cmseos.fnal.gov//store/user/swaldych/
