@@ -19,7 +19,7 @@ When I first started working on this project I was working on lxplus, so I will 
 
 This is a public link for dataset 2s (50x12.5x100 um3 sensor geometry): https://cernbox.cern.ch/s/HaQVugVTlzbKEXH
 
-run loop.sh AFTER you edit the paths for your CERM eos to copy the needed labels and recon2D files... 
+run loop.sh **AFTER** you edit the paths for your CERM eos to copy the needed labels and recon2D files... 
 
 
 # ------LPC CAF (FNAL) SETUP EXAMPLES (recommended)-----------
