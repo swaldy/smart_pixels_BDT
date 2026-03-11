@@ -49,7 +49,7 @@ python3 -m venv lpc-ml
 source lpc-ml/bin/activate
 pip install conifer xgboost==1.7.6 scikit-learn numpy scipy matplotlib pandas hls4ml #this took about 8 minutes for me
 pip install pyarrow
-pip install fsspec
+pip install fsspec fsspec-xrootd xrootd
 ```
 after doing the steps above one time, everytime you open a clean shell do:
 
