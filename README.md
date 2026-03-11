@@ -49,7 +49,14 @@ python3 -m venv lpc-ml
 source lpc-ml/bin/activate
 pip install conifer xgboost==1.7.6 scikit-learn numpy scipy matplotlib pandas hls4ml #this took about 8 minutes for me
 pip install pyarrow
+pip install fsspec
 ```
+after doing the steps above one time, everytime you open a clean shell do:
+
+```
+source nobackup/myenvs/lpc-ml/bin/activate
+```
+
 # ------LXPLUS SETUP EXAMPLES (Not recommended)-----------
 
 The steps below describe how to run scripts when working in lxplus9
