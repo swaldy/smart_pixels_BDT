@@ -62,7 +62,7 @@ plotting.print_dict(cfg)
 print('-' * 50)
 
 # modify the config
-cfg['OutputDir'] = 'root://cmseos.fnal.gov//store/user/swaldych/smart_pix/labels/generated_firmware_files' #where to put all generated firmware files
+cfg['OutputDir'] = './' #where to put all generated firmware files
 cfg['XilinxPart'] = 'xcu250-figd2104-2L-e' #the part number for an FPGA. Taken from example (Alveo U50)
 
 # print the config again
@@ -74,7 +74,9 @@ print('-' * 50)
 conifer_model = conifer.converters.convert_from_xgboost(model, cfg)
 # write the project (writing HLS project to disk)
 conifer_model.write()
-model.save_model(f"{models_dir}/xgboost_model_conifer_{tag}.json")
+local_model_path = f"./xgboost_model_conifer_{tag}.json"
+model.save_model(local_model_path)
+print("saved to", local_model_path)
 
 conifer_model.compile()
 y_hls = conifer_model.decision_function(X_test)
