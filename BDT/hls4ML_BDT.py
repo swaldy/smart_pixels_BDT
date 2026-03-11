@@ -13,16 +13,16 @@ from matplotlib.legend import Legend
 from matplotlib.lines import Line2D
 
 
-models_dir = '/store/user/swaldych/smart_pix/labels/models'
-results_dir = '/store/user/swaldych/smart_pix/labels/results'
+models_dir = 'root://cmseos.fnal.gov//store/user/swaldych/smart_pix/labels/models'
+results_dir = 'root://cmseos.fnal.gov//store/user/swaldych/smart_pix/labels/results'
 
 sensor_geom = "50x12P5x150_0fb"
 threshold = 0.2 #in GeV
 tag = f"{sensor_geom}_0P{str(threshold - int(threshold))[2:]}thresh"
 
-dfx = pd.read_csv(f"/store/user/swaldych/smart_pix/labels/preprocess/FullPrecisionInputTrainSet_{tag}.csv") #y-local
-dfy = pd.read_csv(f"/store/user/swaldych/smart_pix/labels/preprocess/TrainSetLabel_{tag}.csv") 
-pt=pd.read_csv(f"/store/user/swaldych/smart_pix/labels/preprocess/TrainSetPt_{tag}.csv")
+dfx = pd.read_csv(f"root://cmseos.fnal.gov//store/user/swaldych/smart_pix/labels/preprocess/FullPrecisionInputTrainSet_{tag}.csv") #y-local
+dfy = pd.read_csv(f"root://cmseos.fnal.gov//store/user/swaldych/smart_pix/labels/preprocess/TrainSetLabel_{tag}.csv") 
+pt=pd.read_csv(f"root://cmseos.fnal.gov//store/user/swaldych/smart_pix/labels/preprocess/TrainSetPt_{tag}.csv")
 
 X = dfx.values
 y = dfy.values
@@ -62,7 +62,7 @@ plotting.print_dict(cfg)
 print('-' * 50)
 
 # modify the config
-cfg['OutputDir'] = '/store/user/swaldych/smart_pix/labels/generated_firmware_files' #where to put all generated firmware files
+cfg['OutputDir'] = 'root://cmseos.fnal.gov//store/user/swaldych/smart_pix/labels/generated_firmware_files' #where to put all generated firmware files
 cfg['XilinxPart'] = 'xcu250-figd2104-2L-e' #the part number for an FPGA. Taken from example (Alveo U50)
 
 # print the config again
