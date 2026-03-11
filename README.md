@@ -24,7 +24,7 @@ run loop.sh **AFTER** you edit the paths for your CERN eos to copy the needed la
 ```
 bash loop.sh
 ```
-# ------LPC CAF (FNAL) SETUP EXAMPLES (recommended)-----------
+# --LPC CAF (FNAL) SETUP EXAMPLES (recommended)--
 The steps below describe how to run scripts when working on LPC CAF resources. Guide on how to set up LPC with eos is found here: https://www.uscms.org/uscms_at_work/physics/computing/getstarted/uaf.shtml
 
 ## Step 0: set up
