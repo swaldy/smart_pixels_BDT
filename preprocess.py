@@ -21,7 +21,7 @@ print(dftrain.tail())
 
 trainlabels = []
 trainrecons = []
-
+print(list(glob.iglob(dirtrain+'labels*.parquet')))
 #-------FULL PRECISION--------
 
 iter=0
