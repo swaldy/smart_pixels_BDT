@@ -11,6 +11,8 @@ from copy import deepcopy
 threshold = 0.2 #in units of GeV
 noise_threshold = 400
 sensor_geom = '50x12P5x150_0fb'
+pixel_arrayX = 21 
+pixel_arrayY = 13
 dataset_savedir =  '/eos/user/s/swaldych/smart_pix/labels/preprocess/' # for save loc of final datasets
 
 dirtrain = '/eos/user/s/swaldych/smart_pix/labels/'
