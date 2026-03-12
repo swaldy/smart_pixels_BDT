@@ -24,8 +24,8 @@ run loop.sh **AFTER** you edit the paths for your CERN eos to copy the needed la
 ```
 bash loop.sh
 ```
-# --LPC CAF (FNAL) SETUP EXAMPLES (recommended)--
-The steps below describe how to run scripts when working on LPC CAF resources. Guide on how to set up LPC with eos is found here: https://www.uscms.org/uscms_at_work/physics/computing/getstarted/uaf.shtml
+# --LPC CAF (FNAL) SETUP EXAMPLES--
+The steps below describe how to run scripts when working on LPC CAF resources. Guide on how to set up LPC with eos is found here: https://www.uscms.org/uscms_at_work/physics/computing/getstarted/uaf.shtml. Please note I have not been able to get preprocess.py to work on LPC yet, only LXPLUS. This is still a WIP since I started working on LXPLUS and later moved to LPC...
 
 ## Step 0: set up
 If needed, move any files from CERN eos to FNAL eos (must have up to date grid cert! if you need to renew go here: https://ca.cern.ch/ca/user/Request.aspx?template=ee2user)
@@ -57,7 +57,7 @@ after doing the steps above one time, everytime you open a clean shell do:
 source nobackup/myenvs/lpc-ml/bin/activate
 ```
 
-# ------LXPLUS SETUP EXAMPLES (Not recommended)-----------
+# ------LXPLUS SETUP EXAMPLES -----------
 
 The steps below describe how to run scripts when working in lxplus9
 
