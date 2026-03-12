@@ -241,7 +241,7 @@ for (index1, row1), (index2, row2) in zip(trainrecons_csv_quantized.iterrows(), 
 
 plt.figure()
 plt.hist(hist_temp, bins=14,  range=[0, 14], histtype='step', fill=False, density=True)
-plt.savefigure(f"{dataset_savedir}/y_profile_quantized.png")
+plt.savefig(f"{dataset_savedir}/y_profile_quantized.png")
 
 traindf_all = pd.concat([pd.DataFrame(trainlist1), pd.DataFrame(trainlist2 , columns=['cls', 'pt'])], axis=1)
 # traindf_all = pd.concat([pd.DataFrame(trainlist1), pd.DataFrame(trainlist2 , columns=['y-local', 'cls', 'pt'])], axis=1)
