@@ -13,7 +13,7 @@ noise_threshold = 400
 sensor_geom = '50x12P5x150_0fb'
 dataset_savedir =  'root://cmseos.fnal.gov//store/user/swaldych/smart_pix/labels/preprocess' # for save loc of final datasets
 
-dirtrain = 'root://cmseos.fnal.gov//store/user/swaldych/smart_pix/labels'
+dirtrain = 'root://cmseos.fnal.gov//store/user/swaldych/smart_pix/labels/'
 # /location/of/parquets/smartpixels/dataset_2s/dataset_2s_50x12P5_parquets/unflipped
 dftrain = pd.read_parquet(dirtrain+'labels_d16401.parquet')
 print(dftrain.head())
