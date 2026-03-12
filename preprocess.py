@@ -11,7 +11,7 @@ from copy import deepcopy
 threshold = 0.2 #in units of GeV
 noise_threshold = 400
 sensor_geom = '50x12P5x150_0fb'
-dataset_savedir =  'root://cmseos.fnal.gov//store/user/swaldych/smart_pix/labels/preprocess' # for save loc of final datasets
+dataset_savedir =  'root://cmseos.fnal.gov//store/user/swaldych/smart_pix/labels/preprocess/' # for save loc of final datasets
 
 dirtrain = 'root://cmseos.fnal.gov//store/user/swaldych/smart_pix/labels/'
 # /location/of/parquets/smartpixels/dataset_2s/dataset_2s_50x12P5_parquets/unflipped
