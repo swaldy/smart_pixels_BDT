@@ -150,6 +150,10 @@ print("saved full precision, moving to quantized...")
 
 #---------Quantized-----------------------
 print("working on quantized")
+
+qm_charge_levels = [400, 1600, 2400]
+qm_quant_values = [0,1,2,3]
+
 # got this function from https://github.com/smart-pix/pretrain-data-prep/blob/main/dataset_utils.py
 def quantize_manual(x, 
                     charge_levels=[400,800,1200], 
