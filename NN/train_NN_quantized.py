@@ -65,10 +65,10 @@ X_train = scaler.fit_transform(X_train.reshape(-1, X_train.shape[-1])).reshape(X
 X_test = scaler.transform(X_test.reshape(-1, X_test.shape[-1])).reshape(X_test.shape)
 
 model = tf.keras.models.Sequential([
-              tf.keras.layers.Flatten(input_shape=(14,)),
-              tf.keras.layers.Dense(128, activation='relu'),
-              tf.keras.layers.Dense(3, activation='softmax')
-            ])
+    tf.keras.Input(shape=(13,)),
+    tf.keras.layers.Dense(128, activation='relu'),
+    tf.keras.layers.Dense(3, activation='softmax')
+])
             
 model.compile(optimizer=Adam(learning_rate=0.001),
               loss=keras.losses.SparseCategoricalCrossentropy(from_logits=False), # default from_logits=False
