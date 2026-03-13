@@ -115,7 +115,7 @@ plt.title('Training and validation loss')
 plt.xlabel('Epochs')
 plt.ylabel('Loss')
 plt.legend()
-plt.savefig(f"{results_dir}/loss_{tag}.png")
+plt.savefig(f"{results_dir}/loss_q_{tag}.png")
 plt.close()
 
 # --- ACCURACY ---
@@ -129,7 +129,7 @@ plt.title('Training and validation accuracy')
 plt.xlabel('Epochs')
 plt.ylabel('Accuracy')
 plt.legend()
-plt.savefig(f"{results_dir}/accuracy_{tag}.png")
+plt.savefig(f"{results_dir}/accuracy_q_{tag}.png")
 plt.close()
 
 # --- PREDICTIONS ---
@@ -175,19 +175,19 @@ plt.xlabel("true pt (GeV)")
 plt.title("NN Model 2: Classifier acceptance as a function of pT")
 plt.ylabel("classifier acceptance pT > |0.2| GeV")
 plt.ylim(0,1)
-plt.savefig("/eos/user/s/swaldych/smart_pix/labels/models/NN_class_acceptance.png", dpi=300, bbox_inches="tight")
+plt.savefig("/eos/user/s/swaldych/smart_pix/labels/models/NN_class_acceptance_q.png", dpi=300, bbox_inches="tight")
 plt.close()
 
 pd.DataFrame(pred_class, columns=["predict"]).to_csv(
-    f"{results_dir}/pred_class_NN_{tag}.csv", index=False
+    f"{results_dir}/pred_class_NN_q_{tag}.csv", index=False
 )
 
 pd.DataFrame(pt_test, columns=["pt_test"]).to_csv(
-    f"{results_dir}/pt_test_NN_{tag}.csv", index=False
+    f"{results_dir}/pt_test_NN_q_{tag}.csv", index=False
 )
 
 pd.DataFrame(y_test, columns=["true"]).to_csv(
-    f"{results_dir}/testResults_{tag}.csv", index=False
+    f"{results_dir}/testResults_q_{tag}.csv", index=False
 )
 
 # --- TEST METRICS ---
@@ -197,9 +197,9 @@ print("Test accuracy:", score[1])
 
 disp = metrics.ConfusionMatrixDisplay.from_predictions(y_test, pred_class)
 disp.figure_.suptitle("Multiclassifier Confusion Matrix")
-plt.savefig(f"{results_dir}/confusionMatrix_{tag}.png")
+plt.savefig(f"{results_dir}/confusionMatrix_q_{tag}.png")
 plt.close()
 
 # --- SAVE MODEL ---
-model.save_weights(f"{models_dir}/trained_model_{tag}.weights.h5")
-model.save(f"{models_dir}/trained_model_{tag}.h5")
+model.save_weights(f"{models_dir}/trained_model_q_{tag}.weights.h5")
+model.save(f"{models_dir}/trained_model_q_{tag}.h5")
