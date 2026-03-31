@@ -47,10 +47,10 @@ for iter, row in trainlabels_csv.iterrows():
         iter_2+=1
     else:
         iter_rem+=1
-output_file.write("iter_0: "+str(iter_0)+"\n")
-output_file.write("iter_1: "+str(iter_1)+"\n")
-output_file.write("iter_2: "+str(iter_2)+"\n")
-output_file.write("iter_rem: "+str(iter_rem)+"\n")
+# output_file.write("iter_0: "+str(iter_0)+"\n")
+# output_file.write("iter_1: "+str(iter_1)+"\n")
+# output_file.write("iter_2: "+str(iter_2)+"\n")
+# output_file.write("iter_rem: "+str(iter_rem)+"\n")
 
 # plt.hist(trainlabels_csv['pt'], bins=100)
 # plt.title('pT of all events')
@@ -72,7 +72,7 @@ number_of_events = (min(iter_1, iter_2)//1000)*1000
 if(number_of_events*2>iter_0):
     number_of_events = (iter_0//1000)*1000/2
 number_of_events = int(number_of_events)
-output_file.write("Number of events: "+str(number_of_events)+"\n")
+# output_file.write("Number of events: "+str(number_of_events)+"\n")
 
 def sumRow(X):
     X = np.where(X < noise_threshold, 0, X)
