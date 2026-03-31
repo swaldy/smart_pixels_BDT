@@ -68,11 +68,11 @@ for i in range(int(iter/3)):
 # plt.savefig(dataset_savedir+"train_pt_cls12_mar12"+sensor_geom+".png")
 # plt.close()
 
-# number_of_events = (min(iter_1, iter_2)//1000)*1000
-# if(number_of_events*2>iter_0):
-#     number_of_events = (iter_0//1000)*1000/2
-# number_of_events = int(number_of_events)
-# #output_file.write("Number of events: "+str(number_of_events)+"\n")
+number_of_events = (min(iter_1, iter_2)//1000)*1000
+if(number_of_events*2>iter_0):
+    number_of_events = (iter_0//1000)*1000/2
+number_of_events = int(number_of_events)
+#output_file.write("Number of events: "+str(number_of_events)+"\n")
 
 def sumRow(X):
     X = np.where(X < noise_threshold, 0, X)
