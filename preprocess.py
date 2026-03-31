@@ -74,15 +74,15 @@ for i in range(int(iter/3)):
 # number_of_events = int(number_of_events)
 # #output_file.write("Number of events: "+str(number_of_events)+"\n")
 
-# def sumRow(X):
-#     X = np.where(X < noise_threshold, 0, X)
-#     sum1 = 0
-#     sumList = []
-#     for i in X:
-#         sum1 = np.sum(i,axis=0)
-#         sumList.append(sum1)
-#         b = np.array(sumList)
-#     return b
+def sumRow(X):
+    X = np.where(X < noise_threshold, 0, X)
+    sum1 = 0
+    sumList = []
+    for i in X:
+        sum1 = np.sum(i,axis=0)
+        sumList.append(sum1)
+        b = np.array(sumList)
+    return b
 # trainlist1, trainlist2 = [], []
 # hist_temp=[]
 # for (index1, row1), (index2, row2) in zip(trainrecons_csv.iterrows(), trainlabels_csv.iterrows()):
