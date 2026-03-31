@@ -26,15 +26,15 @@ trainrecons = []
 print(list(glob.iglob(dirtrain+'labels*.parquet')))
 # #-------FULL PRECISION--------
 
-# iter=0
-# suffix = 16400
-# for filepath in glob.iglob(dirtrain+'labels*.parquet'):
-#         iter+=3
-# for i in range(int(iter/3)):
-#         trainlabels.append(pd.read_parquet(dirtrain+'labels_d'+str(suffix+i+1)+'.parquet'))
-#         trainrecons.append(pd.read_parquet(dirtrain+'recon2D_d'+str(suffix+i+1)+'.parquet'))
-#         trainlabels_csv = pd.concat(trainlabels, ignore_index=True)
-#         trainrecons_csv = pd.concat(trainrecons, ignore_index=True)
+iter=0
+suffix = 16400
+for filepath in glob.iglob(dirtrain+'labels*.parquet'):
+        iter+=3
+for i in range(int(iter/3)):
+        trainlabels.append(pd.read_parquet(dirtrain+'labels_d'+str(suffix+i+1)+'.parquet'))
+        trainrecons.append(pd.read_parquet(dirtrain+'recon2D_d'+str(suffix+i+1)+'.parquet'))
+        trainlabels_csv = pd.concat(trainlabels, ignore_index=True)
+        trainrecons_csv = pd.concat(trainrecons, ignore_index=True)
 
 # iter_0, iter_1, iter_2 = 0, 0, 0
 # iter_rem = 0
