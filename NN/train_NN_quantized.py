@@ -23,7 +23,7 @@ from tensorflow.keras.optimizers import Adam
 from sklearn.model_selection import train_test_split
 
 
-sensor_geom = "50x12P5x150_0fb"
+sensor_geom = "50x12P5"
 threshold = 0.2 #in GeV
 seed = 13  
 results_dir = '/eos/user/s/swaldych/smart_pix/labels/results'
