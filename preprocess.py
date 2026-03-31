@@ -36,21 +36,21 @@ for i in range(int(iter/3)):
         trainlabels_csv = pd.concat(trainlabels, ignore_index=True)
         trainrecons_csv = pd.concat(trainrecons, ignore_index=True)
 
-# iter_0, iter_1, iter_2 = 0, 0, 0
-# iter_rem = 0
-# for iter, row in trainlabels_csv.iterrows():
-#     if(abs(row['pt'])>threshold):
-#         iter_0+=1
-#     elif(-1*threshold<=row['pt']<0):
-#         iter_1+=1
-#     elif(0<row['pt']<=threshold):
-#         iter_2+=1
-#     else:
-#         iter_rem+=1
-# # output_file.write("iter_0: "+str(iter_0)+"\n")
-# # output_file.write("iter_1: "+str(iter_1)+"\n")
-# # output_file.write("iter_2: "+str(iter_2)+"\n")
-# # output_file.write("iter_rem: "+str(iter_rem)+"\n")
+iter_0, iter_1, iter_2 = 0, 0, 0
+iter_rem = 0
+for iter, row in trainlabels_csv.iterrows():
+    if(abs(row['pt'])>threshold):
+        iter_0+=1
+    elif(-1*threshold<=row['pt']<0):
+        iter_1+=1
+    elif(0<row['pt']<=threshold):
+        iter_2+=1
+    else:
+        iter_rem+=1
+# output_file.write("iter_0: "+str(iter_0)+"\n")
+# output_file.write("iter_1: "+str(iter_1)+"\n")
+# output_file.write("iter_2: "+str(iter_2)+"\n")
+# output_file.write("iter_rem: "+str(iter_rem)+"\n")
 
 # plt.hist(trainlabels_csv['pt'], bins=100)
 # plt.title('pT of all events')
