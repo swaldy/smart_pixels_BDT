@@ -292,3 +292,43 @@ trainlabel.to_csv(dataset_savedir+'/QuantizedTrainSetLabel_'+sensor_geom+'_0P'+s
 trainpt.to_csv(dataset_savedir+'/QuantizedTrainSetPt_'+sensor_geom+'_0P'+str(threshold - int(threshold))[2:]+'thresh.csv', index=False)
 
 print("saved quantized input train set")
+
+
+traindf_all = traindf_all.sample(frac=1, random_state=random_seed0).reset_index(drop=True)
+# traindf_all.to_csv(dataset_savedir+'/'+'/FullTrainData_'+sensor_geom+'_0P'+str(threshold - int(threshold))[2:]+'thresh.csv', index=False)
+traindfcls0 = traindf_all.loc[traindf_all['cls']==0]
+traindfcls1 = traindf_all.loc[traindf_all['cls']==1]
+traindfcls2 = traindf_all.loc[traindf_all['cls']==2]
+print(traindfcls0.shape)
+print(traindfcls1.shape)
+print(traindfcls2.shape)
+print(traindfcls2.head())
+# don't create balanced dataset as only 2000 events present in class 1/2 for 6th y-local bin
+traindfcls0 = traindfcls0.iloc[:2*totalsize]
+traindfcls1 = traindfcls1.iloc[:totalsize]
+traindfcls2 = traindfcls2.iloc[:totalsize]
+print(traindfcls2.head())
+
+traincls0 = traindfcls0.sample(frac = 1, random_state=random_seed1)
+traincls1 = traindfcls1.sample(frac = 1, random_state=random_seed1)
+traincls2 = traindfcls2.sample(frac = 1, random_state=random_seed1)
+train = pd.concat([traincls0, traincls1, traincls2], axis=0)
+
+train = train.sample(frac=1, random_state=random_seed2)
+
+print(traincls0.shape)
+print(traincls1.shape)
+print(traincls2.shape)
+print(train.shape)
+
+trainlabel = train['cls']
+trainpt = train['pt']
+train = train.drop(['cls', 'pt'], axis=1)
+
+print(train.shape)
+print(trainlabel.shape)
+print(trainpt.shape)
+
+train.to_csv(dataset_savedir+'/FullPrecisionInputTrainSet_'+sensor_geom+'_0P'+str(threshold - int(threshold))[2:]+'thresh.csv', index=False)
+trainlabel.to_csv(dataset_savedir+'/TrainSetLabel_'+sensor_geom+'_0P'+str(threshold - int(threshold))[2:]+'thresh.csv', index=False)
+trainpt.to_csv(dataset_savedir+'/TrainSetPt_'+sensor_geom+'_0P'+str(threshold - int(threshold))[2:]+'thresh.csv', index=False)
