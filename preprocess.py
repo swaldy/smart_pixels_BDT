@@ -85,21 +85,21 @@ def sumRow(X):
     return b
 trainlist1, trainlist2 = [], []
 hist_temp=[]
-for (index1, row1), (index2, row2) in zip(trainrecons_csv.iterrows(), trainlabels_csv.iterrows()):
-    rowSum = 0.0
-    X = row1.values
-    X = np.reshape(X,(13,21))
-    rowSum = sumRow(X)
-    hist_temp.append(np.sum(rowSum>0))
-    trainlist1.append(rowSum)
-    cls = -1
-    if(abs(row2['pt'])>threshold):
-        cls=0
-    elif(-1*threshold<=row2['pt']<0):
-        cls=1
-    elif(0<=row2['pt']<=threshold):
-        cls=2
-    trainlist2.append([row2['y-local'], cls, row2['pt']])
+# for (index1, row1), (index2, row2) in zip(trainrecons_csv.iterrows(), trainlabels_csv.iterrows()):
+#     rowSum = 0.0
+#     X = row1.values
+#     X = np.reshape(X,(13,21))
+#     rowSum = sumRow(X)
+#     hist_temp.append(np.sum(rowSum>0))
+#     trainlist1.append(rowSum)
+#     cls = -1
+#     if(abs(row2['pt'])>threshold):
+#         cls=0
+#     elif(-1*threshold<=row2['pt']<0):
+#         cls=1
+#     elif(0<=row2['pt']<=threshold):
+#         cls=2
+#     trainlist2.append([row2['y-local'], cls, row2['pt']])
 
 # plt.hist(hist_temp, bins=14,  range=[0, 14], histtype='step', fill=False, density=True)
 # plt.savefig(dataset_savedir+"y_profile_afterThreshold_mar12"+sensor_geom+".png")
